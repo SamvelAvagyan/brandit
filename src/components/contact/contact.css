@@ -1,0 +1,63 @@
+.contact.container{
+    flex-direction: column;
+    margin-top: 77px;
+}
+
+.contact.text{
+    margin: 0;
+}
+
+
+.contact.container .image-box img{
+    position: absolute;
+    left: -10%;
+    top: -30%;
+    width: 120%;
+    height: 120%;
+}
+
+.contact.container .image-box{
+    position: relative;
+}
+
+.form .message{
+    margin-top: 15%;
+}
+
+@media (max-width: 600px){
+
+    .contact.container{
+        margin-top: 22px;
+    }
+
+    .contact.text{
+        font-size: 4.5vw;
+    }
+
+    .subtext{
+        font-size: 4.5vw;
+    }
+
+    .contact.container .image-box{
+        display: none;
+    }
+
+    .form-box{
+        width: 100%;
+    }
+
+    .form input{
+        font-size: 1rem;
+    }
+
+    .form .message{
+        margin-top: 30%;
+    }
+
+    .form-button{
+        width: 100%;
+        font-size: auto;
+        height: 52px;
+        font-size: 16px;
+    }
+}

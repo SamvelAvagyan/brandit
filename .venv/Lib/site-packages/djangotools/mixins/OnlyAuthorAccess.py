@@ -1,0 +1,11 @@
+from django.core.exceptions import PermissionDenied
+from djangotools.extra import getFirstKwarg
+
+
+class OnlyAuthorAccess(object):
+    def dispatch(self, request, *args, **kwargs):
+        ModelName = self.model        
+        instance = ModelName.objects.get(slug=kwargs[getFirstKwarg(kwargs)])
+        if instance.author == request.user:
+            return super().dispatch(request, *args, **kwargs)
+        raise PermissionDenied

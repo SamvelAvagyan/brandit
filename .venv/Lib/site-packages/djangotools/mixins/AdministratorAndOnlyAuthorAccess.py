@@ -1,0 +1,16 @@
+from django.core.exceptions import PermissionDenied
+from django.contrib.auth.models import Group
+from djangotools.extra import getFirstKwarg
+
+
+class AdministratorAndOnlyAuthorAccess(object):
+    def dispatch(self, request, *args, **kwargs):
+        ModelName = self.model
+        instance = ModelName.objects.get(slug=kwargs[getFirstKwarg(kwargs)])
+        is_author = instance.author == request.user
+        is_administrator = False
+        if Group.objects.filter(name="Administrator").exists():
+            is_administrator = request.user.groups.filter(name="Administrator").exists()
+        if is_author or is_administrator:
+            return super().dispatch(request, *args, **kwargs)
+        raise PermissionDenied

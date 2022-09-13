@@ -1,0 +1,17 @@
+from functools import wraps
+from django.shortcuts import redirect
+from django.core.exceptions import PermissionDenied
+from djangotools.extra import getFirstKwarg
+
+
+def OnlyAuthorAccess(ModelName):
+    def OnlyAuthorAccessDecorator(originalFunc):
+        @wraps(originalFunc)
+        def wrapper(request, *args, **kwargs):
+            instance = ModelName.objects.get(slug=kwargs[getFirstKwarg(kwargs)])
+            if instance.author == request.user:
+                return originalFunc(request, *args, **kwargs)
+            else:
+                raise PermissionDenied
+        return wrapper
+    return OnlyAuthorAccessDecorator

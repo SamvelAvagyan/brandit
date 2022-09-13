@@ -1,0 +1,1 @@
+from djangotools.decorators.OnlyAuthorAccess import OnlyAuthorAccess

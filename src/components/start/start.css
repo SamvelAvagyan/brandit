@@ -1,0 +1,396 @@
+.start.container {
+    flex-direction: column;
+    margin-top: 77px;
+}
+
+.start-wrapper {
+    width: 50%;
+}
+
+label input {
+    z-index: 1;
+    opacity: 0;
+}
+
+label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.checkbox-label {
+    font-size: 1.6rem;
+    position: relative;
+}
+
+.checkbox-label input {
+    position: absolute;
+}
+
+.checkbox-label img {
+    margin-left: 0.8rem;
+    height: 20px;
+    width: 20px;
+}
+
+.subform-title {
+    font-size: 1.6rem;
+}
+.checkbox-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 10%;
+}
+
+.company-details {
+    margin-top: 4%;
+    display: flex;
+    flex-direction: column;
+}
+
+.file-text {
+    font-size: 1.1rem;
+    margin-left: 0.5rem;
+    text-decoration: underline;
+    white-space: nowrap;
+}
+
+.file-label .file-input {
+    width: 100%;
+    position: absolute;
+}
+
+.file-label {
+    width: fit-content;
+    position: relative;
+    margin-top: 2%;
+}
+
+.start-form input,
+.company-details textarea {
+    background: transparent;
+    outline: 0;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 2% 2%;
+    font-size: 1.1rem;
+}
+
+.company-details input::placeholder,
+.company-details textarea::placeholder,
+.personal-details input::placeholder {
+    color: #fff;
+    opacity: 1;
+    font-size: 100%;
+}
+
+.company-details textarea {
+    margin-top: 2%;
+}
+
+.company-details input {
+    margin-top: 2%;
+}
+
+.personal-details {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10%;
+}
+
+.personal-inputs-container {
+    margin-top: 3%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.personal-inputs-container input {
+    width: 47.5%;
+    margin-left: 5%;
+}
+
+.personal-inputs-container input:nth-child(3),
+.personal-inputs-container input:first-child {
+    margin-left: 0;
+}
+
+.personal-inputs-container input:nth-child(3),
+.personal-inputs-container input:nth-child(4) {
+    margin-top: 1%;
+}
+
+.start-form-button {
+    margin-top: 5%;
+    width: 100%;
+    padding: 2% 0;
+    font-size: 1.6rem;
+}
+
+/* React select */
+
+.select-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 4%;
+}
+
+.select__placeholder {
+    color: #fff !important;
+    font-size: 1.1rem;
+}
+.project-select {
+    width: 50%;
+}
+
+.select__control {
+    background-color: transparent !important;
+}
+
+.select__control--is-focused {
+    box-shadow: none !important;
+    border-color: #fff !important;
+}
+
+.select__control:hover {
+    border-color: #fff !important;
+}
+
+.select__menu {
+    background-color: black !important;
+    border: 1px solid #fff !important;
+    top: 85% !important;
+}
+
+.start-wrapper.light .select__menu {
+    background-color: #fff !important;
+}
+
+.start-wrapper.light .select__control {
+    border-color: #000 !important;
+}
+
+.start-wrapper.light .select__placeholder {
+    color: #000 !important;
+}
+.select__indicator-separator {
+    display: none !important;
+}
+
+.select__indicators {
+    margin-right: 3%;
+}
+
+.select__option--is-focused {
+	background-color: transparent !important;
+	cursor: pointer !important;
+}
+
+.select__single-value {
+	color: white !important;
+}
+
+.select__option{
+    background-color: transparent !important;
+    margin-left: 5%;
+}
+
+.select__option:first-child, .select__option:nth-child(7), .select__option:nth-child(15){
+    margin-left: 0;
+    font-weight: bold;
+}
+
+
+
+.select__menu-list {
+	margin: 0px !important;
+    padding: 0 !important;
+    overflow-x: hidden
+}
+
+.select__menu-is-open{
+    background-color: transparent;
+}
+.label-date {
+    width: 50%;
+}
+
+.date-and-time {
+    margin-top: 3%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.date-inputs {
+    margin-top: 3%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.react-datepicker-wrapper {
+    width: 50% !important;
+}
+
+.react-datepicker__input-container > input {
+    width: 100% !important;
+    padding: 4% 4% !important;
+}
+
+.type {
+    font-weight: normal;
+}
+.rc-time-picker {
+    margin-left: 5% !important;
+    width: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.rc-time-picker * {
+    box-sizing: border-box !important;
+}
+
+.rc-time-picker input {
+    font-size: 1.1rem !important;
+    padding: 4% 4% !important;
+    font-weight: normal !important;
+    height: auto !important;
+}
+
+.personal-details.schedule {
+    margin-top: 4%;
+}
+
+.date-inputs input::placeholder {
+    color: #fff !important;
+    opacity: 1 !important;
+}
+
+.start-wrapper.light input,
+.start-wrapper.light textarea {
+    border: 1px solid #000;
+    color: #000;
+}
+
+.start-wrapper.light input::placeholder,
+.start-wrapper.light textarea::placeholder {
+    color: #000 !important;
+}
+
+.project-select{
+    width: 65%;
+}
+
+@media (max-width: 1280px) {
+    .start-wrapper {
+        width: 65%;
+    }
+    .subform-title {
+        font-size: 1.3rem;
+    }
+
+    .select__placeholder {
+        font-size: 0.9rem !important;
+    }
+
+    .start-form input,
+    .company-details textarea {
+        font-size: 0.9rem !important;
+    }
+
+    .checkbox-label {
+        font-size: 1.3rem;
+    }
+
+    .file-text {
+        font-size: 0.9rem;
+    }
+
+    .start-form-button {
+        font-size: 1.3rem;
+    }
+}
+@media (max-width: 600px) {
+    .start.container{
+        margin-top: 22px;
+    }
+    .start-wrapper {
+        width: 100%;
+    }
+
+    .start-form-button {
+        font-size: 1rem;
+    }
+
+    .file-text {
+        font-size: .8rem;
+    }
+
+    .subform-title {
+        font-size: 1rem;
+    }
+
+    .checkbox-label {
+        font-size: 1rem;
+    }
+
+    .select__placeholder {
+        font-size: 0.8rem !important;
+    }
+
+    .project-select {
+        width: 65%;
+    }
+
+    .personal-inputs-container {
+        flex-direction: column;
+    }
+
+    .personal-inputs-container input{
+        margin: 2% 0 0 0 !important;
+        width: 100%;
+    }
+
+    .personal-inputs-container input:first-child{
+        margin: 0 !important;
+    }
+
+    .start-wrapper .text{
+        margin-bottom: .7rem;
+    }
+
+    .rc-time-picker input{
+        font-size: .9rem !important;
+    }
+
+    .date-and-time{
+        margin-top: 6%;
+    }
+    .date-inputs{
+        flex-direction: column;
+    }
+
+    .date-inputs input{
+        width: 100%;
+    }
+
+    .start-form input{
+        padding: 4% 2% !important;
+        border-radius: 3px;
+    }
+
+    .date-inputs .react-datepicker-wrapper, .date-inputs .rc-time-picker{
+        width: 100% !important;
+    }
+
+    .rc-time-picker{
+        margin: 3% 0 0 0!important;
+    }
+}

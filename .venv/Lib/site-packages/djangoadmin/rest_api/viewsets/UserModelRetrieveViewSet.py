@@ -1,0 +1,18 @@
+from rest_framework.generics import GenericAPIView
+from djangoadmin.models import UserModel
+from djangoadmin.rest_api.serializers import UserModelSerializer
+from django.shortcuts import get_object_or_404
+from rest_framework.response import Response
+from django.core.serializers import serialize
+import json
+
+
+class UserModelRetrieveViewSet(GenericAPIView):
+    serializer_class = UserModelSerializer
+    queryset = UserModel
+
+    def get(self, request, *args, **kwargs):
+        instance = get_object_or_404(UserModel, user=self.request.user)
+        data = serialize('json', [instance])
+        data = json.loads(data)
+        return Response(data, status=200)

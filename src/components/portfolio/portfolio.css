@@ -1,0 +1,168 @@
+.title-box {
+    position: absolute;
+    width: 100%;
+    height: 10vh;
+    bottom: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(11, 10, 10, 0.05) -0.83%,
+        #000000 99.17%
+    );
+    display: flex;
+}
+
+.portfolio.container{
+    flex-direction: column;
+    margin-top: 77px;
+}
+
+.portfolio.container .text{
+    margin-bottom: 0;
+}
+.images-wrapper .upper-col .portfolio-item {
+    width: 32%;
+    margin-left: 2%;
+}
+
+.portfolio-item{
+    position: relative;
+    overflow: hidden;
+}
+.images-wrapper .portfolio-item:first-child {
+    margin-left: 0;
+}
+
+.upper-col {
+    display: flex;
+    flex-direction: row;
+}
+
+.image.title {
+    font-size: 1.9rem;
+    font-weight: 500;
+    align-self: flex-end;
+    margin-left: 1rem;
+    margin-bottom: .8rem;
+    color: #fff;
+}
+
+.portfolio-item .portfolio-images {
+    width: 100%;
+    height: 100%;
+    transition: 0.5s all ease;
+}
+
+.portfolio-item .portfolio-images:hover {
+    transform: scale(1.1);
+}
+
+.lower-col .portfolio-item{
+    width: 50%;
+}
+
+.lower-col{
+    display: flex;
+    flex-direction: row;
+}
+
+.lower-col .portfolio-item{
+    margin-left: 2%;
+}
+
+.middle{
+    margin: 1% 0;
+}
+
+.categories-list{
+    display: flex;
+    list-style-type: none;
+    max-height: 35px;
+}
+
+.categories-list li{
+    margin-left: .5rem;
+    font-size: 1.3rem;
+}
+
+.categories-list li:first-child{
+    margin: 0;
+}
+
+.categories-wrapper{
+    margin: 2% 0;
+}
+
+/* .grid-images-wrapper{
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-columns: 1200px;
+    grid-template-columns: 600px 600px;
+} */
+
+/* .middle{
+    grid-column: 1/4;
+}
+
+.item5{
+    width: 100%
+}
+
+.item6{
+    width: 100%
+} */
+
+@media screen and (max-width: 1441px) {
+    .image.title{
+        font-size: 1.4rem;
+    }
+
+    .title-box{
+        height: 8vh;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .categories-list li{
+        font-size: 1.1rem;
+    }
+
+    .categories-list{
+        overflow-y: hidden;
+        overflow-x: scroll;
+        white-space: nowrap;
+        
+    }
+
+    .categories-list::-webkit-scrollbar{
+        display: none;
+    }
+
+    .image.title{
+        font-size: 1.1rem;
+    }
+
+    .title-box{
+        height: 5vh;
+    }
+
+}
+
+@media screen and (max-width: 600px){
+    .portfolio.container{
+        margin-top: 22px;
+    }
+    .image.title{
+        font-size: 1.4rem;
+        margin-left: .5rem;
+        margin-bottom: .2rem;
+    }
+
+    .categories-list li{
+        font-size: .9rem;
+        margin-left: 16px;
+    }
+
+    .categories-wrapper{
+        margin: 20px 0 15px 0;
+    }
+}

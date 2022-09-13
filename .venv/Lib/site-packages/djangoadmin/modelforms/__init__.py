@@ -1,0 +1,4 @@
+from djangoadmin.modelforms.UserModelForm import UserModelForm
+from djangoadmin.modelforms.SigninModelForm import SigninModelForm
+from djangoadmin.modelforms.RegistrationModelForm import RegistrationModelForm
+from djangoadmin.modelforms.EditProfileModelForm import EditProfileModelForm

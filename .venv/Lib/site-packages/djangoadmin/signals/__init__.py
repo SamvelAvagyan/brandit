@@ -1,0 +1,1 @@
+from djangoadmin.signals.createUserProfile import createUserProfile

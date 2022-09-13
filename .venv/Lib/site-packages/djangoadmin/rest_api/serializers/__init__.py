@@ -1,0 +1,3 @@
+from djangoadmin.rest_api.serializers.UserRegistrationSerializer import UserRegistrationSerializer
+from djangoadmin.rest_api.serializers.UserProfileSerializer import UserProfileSerializer
+from djangoadmin.rest_api.serializers.UserModelSerializer import UserModelSerializer

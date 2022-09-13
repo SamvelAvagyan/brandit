@@ -1,0 +1,1 @@
+from djangoadmin.modeladmins.UserModelAdmin import UserModelAdmin

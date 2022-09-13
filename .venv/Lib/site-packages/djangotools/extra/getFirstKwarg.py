@@ -1,0 +1,8 @@
+# This function extract first key of given kwargs.
+def getFirstKwarg(kwargs):
+    first_key = None
+    for key, value in kwargs.items():
+        first_key = key
+        if key is not None:
+            break
+    return first_key

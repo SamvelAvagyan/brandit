@@ -1,0 +1,8 @@
+from rest_framework.serializers import ModelSerializer
+from djangoadmin.models import UserModel
+
+
+class UserModelSerializer(ModelSerializer):
+    class Meta:
+        model = ModelSerializer
+        fields = "__all__"

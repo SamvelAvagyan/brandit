@@ -1,0 +1,10 @@
+from django.core.exceptions import PermissionDenied
+from django.contrib.auth.models import Group
+
+
+class OnlyAdministratorAccess(object):
+    def dispatch(self, request, *args, **kwargs):
+        if Group.objects.filter(name="Administrator").exists():
+            if request.user.groups.filter(name="Administrator").exists():
+                return super().dispatch(request, *args, **kwargs)
+        raise PermissionDenied
